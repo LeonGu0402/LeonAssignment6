@@ -37,20 +37,23 @@ namespace NodeCanvas.Tasks.Actions {
             {
                 locationZ += offset;
             }
-            if (Input.GetKey(KeyCode.S))
-            {
-                locationZ -= offset;
-            }
             if (Input.GetKey(KeyCode.D))
             {
                 locationX += offset;
             }
+            if (Input.GetKey(KeyCode.S))
+            {
+                locationZ -= offset;
+            }
+            
             if (Input.GetKey(KeyCode.A))
             {
                 locationX -= offset;
             }
 
             movePosition = new Vector3(locationX, 0, locationZ);
+
+            //Debug.Log(movePosition);
 
             navAgent.value.destination = movePosition;
         }
