@@ -35,5 +35,10 @@ namespace NodeCanvas.Tasks.Conditions {
 			return (isCatch.value);
 			
 		}
-	}
+
+        protected override void OnDisable()
+        {
+            isCatch.value = false;
+        }
+    }
 }
